@@ -1,0 +1,16 @@
+# /plugins/analytics/blueprints/fields/analytics.yml
+type: group
+fields:
+  analyticssettings:
+    label: Analytics
+    type: headline
+    help: Setup special analytics for this page
+  analyticsdisabled:
+    label: Disable Analytics
+    type: toggle
+    text: yes/no
+    default: false
+    help: Disable analytics on this page
+
+
+

@@ -1,0 +1,8 @@
+{
+    "name": "kirby-analytics-plugin",
+    "description": "Kirby Analytics Plugin",
+    "author": "Volker Otto <hello@volkerotto.net>",
+    "version": "1.0.0",
+    "type": "kirby-plugin",
+    "license": "MIT"
+}
