@@ -1,4 +1,4 @@
-# Kirby Analytics Plugin Readme
+# Kirby Analytics Plugin
 
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Kirby Version](https://img.shields.io/badge/Kirby-2.5.5%2B-red.svg)
 
@@ -41,17 +41,7 @@ $ git submodule add https://github.com/l4ci/kirby-analytics-plugin site/plugins/
 
 ## Setup
 
-### 1. Blueprint
-
-To make it work as expected, add the following code to your blueprints, where you want the analytics options to show up in the panel.
-
-```
-fields:
-  analytics:
-    extends: analytics
-```
-
-### 2. Snippet
+### 1. Snippet
 
 Add the following code to your `footer.php` snippet (or the fitting one) just before your closing`</body>`.
 
@@ -60,7 +50,7 @@ snippet('analytics');
 ```
 
 
-### 3. Config
+### 2. Config
 
 Enable the plugin by adding the following to your `site/config/config.php` and choose a service below.
 
@@ -82,8 +72,9 @@ c::set('analytics', true);
 c::get('analytics.trackloggedinuser', false);
 
 // Google Analytics
-c::get('analytics.google'             , false);
-c::get('analytics.google.ua'          , false);
+c::get('analytics.google', false);
+// Put your UA-XXXXX-XX here
+c::get('analytics.google.id', false);
 // Anonymize Ip Adresses
 // - Enabled by default
 c::get('analytics.google.anonymizeip' , true);
@@ -107,6 +98,16 @@ c::get('analytics.mix.token' , false);
 // - Enabled by default
 c::get('analytics.dnt', true);
 
+```
+
+### (optional) Blueprint
+
+Add the following code to your blueprints, where you want the analytics options to show up in the panel. This will create a field in the panel, to disable analytics on the current page.
+
+```
+fields:
+  analytics:
+    extends: analytics
 ```
 
 ## Usage
